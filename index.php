@@ -127,6 +127,7 @@ tr:nth-child(even)
 .pglimit:hover .pgoption
 {
 	visibility: visible;
+	
 }
 .spaceOut
 {
