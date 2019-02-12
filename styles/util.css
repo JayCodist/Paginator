@@ -1,0 +1,55 @@
+/*Tooltip container*/
+.tooltip
+{
+	position: relative;
+	/*display: inline-block;*/
+	cursor: pointer;
+	font-family: segoe UI;
+}
+
+/* The code below defines styling rules
+   for a "tooltiptext" element
+   inside a "tooltip" element */
+.tooltip .tooltiptext
+{
+	position: absolute;
+	z-index: 1;
+
+	visibility: hidden;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	color: #fff;
+	background-color: dimgray;
+	border: 1px solid dimgray;
+
+/* Handle positioning of tooltip in relation to the parent element*/
+	
+	bottom: 135%;
+	left: 30%;
+
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+/* Inserts arrow at an edge of the tooltip shown by by inserting an empty 
+   element at the edge with the pseudo-element class, ::after */
+.tooltip .tooltiptext::after
+{
+	content: " ";
+	position: absolute; /* Sets up the code below */
+	top: 100%;
+	right: 40%; /* Margin should compensate for the padding of tooltiptext 
+		so as to place arrow exactly at the middle of the tooltip side */
+
+	border-width: 7px;
+	border-style: solid;
+	border-color: dimgray transparent transparent transparent; /* Arrow points down */
+}
+
+/* What happens to the tooltiptext element when user hovers on tooltip element */
+.tooltip:hover .tooltiptext
+{
+	visibility: visible;
+	opacity: 1;
+}
