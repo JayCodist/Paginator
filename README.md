@@ -1,6 +1,6 @@
 # Paginator
 
-Displays paginated results from existing database of schools list (MySQL database loaded from schools list.txt
+Displays paginated results from existing database of schools list (MySQL database loaded from "school list.txt")
 
 ## To do
 
