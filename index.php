@@ -104,18 +104,6 @@ tr:nth-child(even)
 {
 	margin-right: 150px;
 }
-.pglimit
-{
-	margin-right: 350px;
-	font-family: segoe UI;
-	max-width: 160px;
-	max-height: 30px;
-	text-align: center;
-	font-size: 17px;
-	cursor: pointer;
-	background-color: #fff;
-	box-shadow: 0px 0px 2px #888888;
-}
 .pglimit .pgoption
 {
 	visibility: hidden;
@@ -123,6 +111,7 @@ tr:nth-child(even)
 	width: 160px;
 	height: 30px;
 	background-color: white;
+	display: block;
 }
 .pglimit:hover .pgoption
 {
@@ -158,17 +147,6 @@ else
 <div class="searchDiv" align="right">
 
 	<form>
-		
-		<div class="pglimit"> 10 results per page
-			<div class="pgoption" id="pg5" > 5 results per page</div>
-			<div class="pgoption" id="pg10" > 10 results per page</div>
-			<div class="pgoption" id="pg15" > 15 results per page</div>
-			<div class="pgoption" id="pg20" > 20 results per page</div>
-			<div class="pgoption" id="pg25" > 25 results per page</div>
-			<div class="pgoption" id="pg30" > 30 results per page</div>
-			<div class="pgoption" id="pg35" > 35 results per page</div>
-		</div>
-	
 		<input type="text" class="searchBox" name="search" placeholder="Filter results" 
 		value="<?php echo (isset($_GET['search']) ? 
 		filter_var($_GET['search'], FILTER_SANITIZE_STRING) : '' )?>" />
